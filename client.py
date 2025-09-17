@@ -2,7 +2,7 @@
 
 import socket
 
-host  = 'nombresito'
+host  = 'nombre_del_servidor_o_ip'
 port = 8000
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((host,port))
