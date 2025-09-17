@@ -15,4 +15,11 @@ for res in socket.getaddrinfo(host,port,socket.AF_UNSPEC, socket.SOCK_STREAM,0,s
     except OSError as msg:
         s=None
         continue
+    try:
+        s.bind(sa)
+        s.listen(1)
+    except OSError as msg:
+        s.close()
+        s=None
+        continue    
  # stop code continue ....
